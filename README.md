@@ -1,3 +1,12 @@
+# simple-react-router-app
+
+## This project use `react-router-dom` to implement router for react app
+
+## Features
+
+* [x] Basic Routing with component `BrowserRouter`.
+* [ ] Nested Routing & URL Parameters
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

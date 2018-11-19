@@ -6,6 +6,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+//Step 1 - Wrap root component by Component `BrowserRouter`
 ReactDOM.render(
 	<BrowserRouter>
 		<App />

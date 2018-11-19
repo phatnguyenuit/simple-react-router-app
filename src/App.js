@@ -10,6 +10,7 @@ const Home = () => (
 
 const Airport = () => (
 	<div>
+		<h2>Airports</h2>
 		<ul>
 			<li>Jomo Kenyatta</li>
 			<li>Tambo</li>
@@ -20,6 +21,7 @@ const Airport = () => (
 
 const City = () => (
 	<div>
+		<h2>Cities</h2>
 		<ul>
 			<li>San Francisco</li>
 			<li>Istanbul</li>
@@ -28,22 +30,26 @@ const City = () => (
 	</div>
 );
 
-const Courses = ({ match }) => (
-	<div>
-	   <ul>
-		  <li><Link to={`${match.url}/technology`}>Technology</Link></li>
-		  <li><Link to={`${match.url}/business`}>Business</Link></li>
-		  <li><Link to={`${match.url}/economics`}>Economics</Link></li>
-	  </ul>
-  
-	  <Route exact path={`${match.path}/:course`} render={({match}) => (<div> This is {match.params.course} </div>)}/>
-	</div>
-  );
+const Courses = ({ match }) => {
+	return (
+		<div>
+			<h2>Courses</h2>
+			<ul>
+				<li><Link to={`${match.url}/technology`}>Technology</Link></li>
+				<li><Link to={`${match.url}/business`}>Business</Link></li>
+				<li><Link to={`${match.url}/economics`}>Economics</Link></li>
+			</ul>
 
+			<Route exact path={`${match.path}/:course`} render={({ match }) => (<div> This is {match.params.course} </div>)} />
+		</div>
+	);
+
+}
 class App extends Component {
 	render() {
 		return (
 			<div>
+				{/* Your navigation should include component `Link` */}
 				<ul>
 					<li><Link to="/">Home</Link></li>
 					<li><Link to="/airports">Airports</Link></li>
@@ -51,10 +57,11 @@ class App extends Component {
 					<li><Link to="/cities">Cities</Link></li>
 				</ul>
 
-				<Route path="/" component={Home} />
-				<Route path="/airports" component={Airport} />
-				<Route path="/courses" component={Courses}/>
-				<Route path="/cities" component={City} />
+				{/* Step 2 - Include `Route` component to whatever you want to render. Use component or render props to render */}
+				<Route path="/" component={Home} exact />
+				<Route path="/airports" component={Airport} exact />
+				<Route path="/courses" component={Courses} />
+				<Route path="/cities" component={City} exact />
 			</div>
 		);
 	}

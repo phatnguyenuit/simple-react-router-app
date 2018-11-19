@@ -2,6 +2,8 @@
 
 ## This project use `react-router-dom` to implement router for react app
 
+Follow this article: [React Router 4: A Practical Introduction](https://auth0.com/blog/react-router-4-practical-tutorial/)
+
 ## Features
 
 * [x] Basic Routing with component `BrowserRouter`.

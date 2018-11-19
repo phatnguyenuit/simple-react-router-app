@@ -6,6 +6,7 @@
 
 * [x] Basic Routing with component `BrowserRouter`.
 * [x] Nested Routing & URL Parameters.
+* [x] Proteced and authentication(on branch `protected_authentication`).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
